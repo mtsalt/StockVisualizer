@@ -12,16 +12,69 @@
     <script src="static/js/d3.min.js"></script>
     <script src="static/js/c3.min.js"></script>
     <script async src="static/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <header>StockVisualizer</header>
+    <header>
+        <div id="page-title">StockVisualizer</div>
+        <!-- <div class="selecter">
+            <ul>
+                <li>sample-A</li>
+                <li>sample-B</li>
+                <li>sample-C</li>
+            </ul>
+        </div> -->
+    </header>
     <main>
         <div id="chart-area">
-            <div id="chart-title">Chart Sample</div>
+            <div id="chart-title">S&P 500</div>
+            <div class="selecter">
+                <ul>
+                    <li>date</li>
+                    <li>max</li>
+                    <li>min</li>
+                </ul>
+            </div>
+            <canvas id="myChart" height="80vh"></canvas>
             <div id="stock-chart"></div>
         </div>
     </main>
     <footer></footer>
+
+    <script>
+         const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'My First dataset',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {
+    }
+  };
+    </script>
 </body>
 </html>
 
+<script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+  </script>
+   
