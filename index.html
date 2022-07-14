@@ -17,29 +17,51 @@
 <body>
     <header>
         <div id="page-title">StockVisualizer</div>
-        <!-- <div class="selecter">
-            <ul>
-                <li>sample-A</li>
-                <li>sample-B</li>
-                <li>sample-C</li>
-            </ul>
-        </div> -->
+        <div id="header-menu">
+          <ul>
+            <li>Logout</li>
+            <li>Settings</li>
+            <li>About</li>
+          </ul>
+        </div>
     </header>
     <main>
-        <div id="chart-area">
-            <div id="chart-title">S&P 500</div>
-            <div class="selecter">
-                <ul>
-                    <li>date</li>
-                    <li>max</li>
-                    <li>min</li>
-                </ul>
-            </div>
-            <canvas id="myChart" height="80vh"></canvas>
-            <div id="stock-chart"></div>
+      <div id="chart-title">S&P 500</div>
+      <div id="left-area">
+        <div id="info-area">
+          <div id="price">3,801.78</div>
+          <div id="updown">0.45% UP</div>
         </div>
+        <div id="chart-area">
+          <div id="range-selecter">
+            <ul>
+              <li>1D</li>
+              <li>5D</li>
+              <li>1M</li>
+              <li>6M</li>
+              <li>YTD</li>
+              <li>1Y</li>
+              <li>5Y</li>
+              <li>Max</li>
+            </ul>
+          </div>
+          <canvas id="myChart" height="80vh"></canvas>
+          <div id="stock-chart"></div>
+        </div>
+      </div>
+      <div id="right-area">
+        <div class="selecter">
+          <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+          </ul>
+        </div>
+      </div>
     </main>
-    <footer></footer>
+    <!-- <footer>
+      add site menu here.
+    </footer> -->
 
     <script>
          const labels = [
