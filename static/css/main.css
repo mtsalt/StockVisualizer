@@ -1,10 +1,11 @@
 html, body {
     margin: 0;
     padding: 0;
+
     font: 1.2em "Fira Sans", sans-serif;
-    /* background-color: rgb(63, 46, 156); */
     background-color: rgb(16, 20, 61);
     color: white;
+    user-select: none;
 }
 
 header {
@@ -47,9 +48,17 @@ header {
 }
 
 main {
-    display: grid;
+    /* display: grid; */
     padding: 30px;
 
+    /* grid-template: 
+        "chart-title chart-title" auto
+        "left-area right-area" auto /
+        70% 30%; */
+}
+
+#chart {
+    display: grid;
     grid-template: 
         "chart-title chart-title" auto
         "left-area right-area" auto /
@@ -73,10 +82,10 @@ main {
 
 #updown {
     border: solid 1px gray;
-    border-radius: 10px;
+    border-radius: 20px;
     font-size: 80%;
     font-weight: bold;
-    padding: 5px;
+    padding: 5px 10px;
     margin-left: 20px;
     background-color: rgb(88, 172, 72);
 }
@@ -99,23 +108,36 @@ main {
 
 #chart-area {
     padding: 20px 50px;
-    height: 500px;
+    height: auto;
 }
 
+.selecter {
+    padding: 20px 0;
+    /* height: auto; */
+    display: inline-flex;
+}
 .selecter ul {
-    display: flex;
+    /* display: flex; */
     margin: 0;
+    padding: 0;
 }
 
 .selecter li {
+    float: left;
+    cursor: pointer;
     text-align: center;
     font-size: 90%;
-    border: solid 1px white;
+    border: solid 1px gray;
     border-radius: 20px;
     padding: 3px 15px;
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     list-style: none;
-    background-color: rgb(87, 75, 156);
+}
+
+.selecter li:hover {
+    color: yellow;
+    background-color: rgb(121, 114, 160);
 }
 
 #range-selecter ul {
@@ -149,4 +171,60 @@ footer {
     font-weight: bold;
     background-color: rgb(12, 72, 163);
     padding: 10px;
+}
+
+.space {
+    width: 100%;
+    height: 30px;
+}
+
+#list-title {
+    border-bottom: solid 1px gray;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+#ranking-table {
+    padding: 0 40px;
+}
+
+table, td, th {
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+
+tr:hover {
+    background-color: rgb(121, 114, 160);
+    cursor: pointer;
+    color: yellow;
+}
+
+th {
+    font-size: 80%;
+    background-color: rgb(57, 46, 131);
+    padding: 3px;
+}
+
+td {
+    font-size: 70%;
+    padding: 2px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+#ranking-table table {
+    overflow-y: scroll;
+    overflow-x: scroll;
+    width: 100%;
+    
 }
