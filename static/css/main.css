@@ -6,6 +6,8 @@ html, body {
     background-color: rgb(16, 20, 61);
     color: white;
     user-select: none;
+
+    min-width: 1485px;
 }
 
 header {
@@ -185,7 +187,7 @@ footer {
 }
 
 #ranking-table {
-    padding: 0 40px;
+    padding: 20px 40px 0 40px;
 }
 
 table, td, th {
@@ -193,7 +195,7 @@ table, td, th {
     border-bottom: 1px solid lightgray;
 }
 
-tr:hover {
+.table-content:hover {
     background-color: rgb(121, 114, 160);
     cursor: pointer;
     color: yellow;

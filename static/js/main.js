@@ -1,10 +1,30 @@
-// var chart = c3.generate({
-//     bindto: '#stock-chart',
-//     size: { width: 1800, height: 500},
-//     data: {
-//       columns: [
-//         ['data1', 30, 200, 100, 400, 150, 250],
-//         ['data2', 50, 20, 10, 40, 15, 25]
-//       ]
-//     }
-// });
+const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: '6 Months',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {
+    }
+};
+
+const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+);
