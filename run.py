@@ -1,8 +1,14 @@
+from flask import config
 from app import create_app
+import app.config as conf
 
-app = create_app()
 
 if __name__ == '__main__':
-    host='0.0.0.0'
-    port='5000'
-    app.run(host=host, port=port)
+
+    # TODO: attention to setting parameter when deploying this app!
+    app = create_app(setting=conf.development_conf)
+
+    try:
+        app.run()
+    except Exception as e:
+        print(e)
