@@ -1,2 +1,2 @@
-class Config:
+class Config(object):
     pass

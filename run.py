@@ -1,12 +1,12 @@
 from flask import config
 from app import create_app
-import app.config as conf
+from app.config import development_conf, production_conf
 
 
 if __name__ == '__main__':
 
     # TODO: attention to setting parameter when deploying this app!
-    app = create_app(setting=conf.development_conf)
+    app = create_app(setting=development_conf.Config)
 
     try:
         app.run()
